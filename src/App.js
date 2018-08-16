@@ -20,7 +20,7 @@ class App extends Component {
         <main>
           <Route exact path="/" component={Landing} />  {/* exact path because by default a route matches any path in the URL that begins with the value of the path prop */}
           <Route path="/library" component={Library} />
-          <Route path="/album" component={Album} />
+          <Route path="/album/:slug" component={Album} />
         </main>
       </div>
     );
