@@ -48,22 +48,22 @@ class Album extends Component {
 
   clickToggle(song) {
     if (this.state.isPlaying && this.state.currentSong === song) {
-      return "md-pause";
+      return "ion-pause";
     }else {
       if (this.state.currentSong === song && this.state.isPlaying ===false){
-        return "md-play"
+        return "ion-play"
       }
     }
   }
 
   hoverToggle(song){
     if(this.state.isPlaying === false && this.state.currentSong === false ) {
-      return "md-play"
+      return "ion-play"
     }else {
       if (this.state.isPlaying && this.state.currentSong === song){
-      return "md-pause"
+      return "ion-pause"
     }else{
-      return "md-play";
+      return "ion-play";
       }
     }
   }
@@ -91,10 +91,10 @@ class Album extends Component {
                 onMouseLeave={() => this.setState({isHovered: false})} >
                 <td className="song-actions">
                   {this.state.isHovered === idx + 1 ? (
-                     <span><Ionicon icon={this.hoverToggle(ele)} /></span>
+                     <span className="ion-play"></span>
                    ) : (
                    this.state.isPlaying && this.state.currentSong === ele || !this.state.isPlaying && this.state.currentSong === ele ?
-                     <span><Ionicon icon={this.clickToggle(ele)} /></span>
+                     <span className="ion-play"></span>
                      : (idx + 1)
                    )}
 
