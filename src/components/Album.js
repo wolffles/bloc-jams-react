@@ -48,10 +48,10 @@ class Album extends Component {
 
   clickToggle(song) {
     if (this.state.isPlaying && this.state.currentSong === song) {
-      return "md-pause";
+      return "ion-pause";
     }else {
       if (this.state.currentSong === song && this.state.isPlaying ===false){
-        return "md-play"
+        return "ion-play"
       }
     }
   }
@@ -94,7 +94,7 @@ class Album extends Component {
                      <span><Ionicon icon={this.hoverToggle(ele)} /></span>
                    ) : (
                    this.state.isPlaying && this.state.currentSong === ele || !this.state.isPlaying && this.state.currentSong === ele ?
-                     <span><Ionicon icon={this.clickToggle(ele)} /></span>
+                     <span className={this.clickToggle(ele)} ></span>
                      : (idx + 1)
                    )}
 
