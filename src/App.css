@@ -1,7 +1,31 @@
+.album {
+  background-color: grey;
+}
 
+#song-list {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+tr:hover{
+  background-color: yellow;
+  /* songs are poping because of two differnt methods for icons*/
+}
 
 .App {
   text-align: center;
+  background-color: pink;
+}
+
+header nav{
+  background-color: lightblue;
+}
+
+header nav a:hover{
+  background-color: green;
+  font-size: 15;
 }
 
 .App-logo {

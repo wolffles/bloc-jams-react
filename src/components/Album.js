@@ -125,6 +125,7 @@ class Album extends Component {
     }else {
       if (this.state.isPlaying && this.state.currentSong === song){
       return "md-pause"
+      // I used two different methods to deliver icons, which is why it pops when hovered.
     }else{
       return "md-play";
       }
@@ -139,7 +140,7 @@ class Album extends Component {
             <h2 className="artist">{this.state.album.artist}</h2>
             <div id="release-info">{this.state.album.releaseInfo}</div>
         </section>
-        <table id='song-list'>
+        <table id="song-list">
           <colgroup>
             <col id='song-number-column' />
             <col id='song-title-column' />
